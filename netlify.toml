@@ -1,6 +1,7 @@
 [build]
   functions = "netlify/functions"
+  publish = "."
 
-[dev]
-  functions = "netlify/functions"
-  publish = "./"  # optional: ensures Netlify serves your HTML files from root
+# ✅ Include the data folder during build
+[[include]]
+  path = "data"

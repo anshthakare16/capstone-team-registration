@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Capstone Project Registration</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <form id="teamForm" class="card">
+    <h1>🚀 Capstone Project Registration</h1>
+
+    <div class="field-group">
+      <label>Select Class</label>
+      <select name="class" id="classSelect">
+        <option value="">-- Select Class --</option>
+        <option value="AIDS">AIDS</option>
+        <option value="CSE A">CSE A</option>
+        <option value="CSE B">CSE B</option>
+      </select>
+    </div>
+
+    <h2>👨‍💻 Team Members</h2>
+    <div class="field-group">
+      <label>Member 1</label>
+      <select name="member1" class="member-select"></select>
+      <label>Member 2</label>
+      <select name="member2" class="member-select"></select>
+      <label>Member 3</label>
+      <select name="member3" class="member-select"></select>
+      <label>Member 4</label>
+      <select name="member4" class="member-select"></select>
+    </div>
+
+    <h2>🧑‍🏫 Mentor Preferences</h2>
+    <div class="field-group">
+      <label>Mentor 1</label>
+      <select name="mentor1" class="mentor-select"></select>
+      <label>Mentor 2</label>
+      <select name="mentor2" class="mentor-select"></select>
+      <label>Mentor 3</label>
+      <select name="mentor3" class="mentor-select"></select>
+      <label>Mentor 4</label>
+      <select name="mentor4" class="mentor-select"></select>
+    </div>
+
+    <h2>💡 Project Ideas</h2>
+    <div class="field-group">
+      <label>Idea 1</label>
+      <textarea name="idea1" placeholder="Enter idea"></textarea>
+      <label>Idea 2</label>
+      <textarea name="idea2" placeholder="Enter idea"></textarea>
+      <label>Idea 3</label>
+      <textarea name="idea3" placeholder="Enter idea"></textarea>
+    </div>
+
+    <button type="submit">Submit Team</button>
+    <div id="response"></div>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>

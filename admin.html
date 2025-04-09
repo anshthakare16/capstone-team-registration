@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>🔐 Admin Panel</h1>
+    <div id="login">
+      <input type="password" id="adminPassword" placeholder="Enter admin password" />
+      <button onclick="checkPassword()">Login</button>
+    </div>
+    <div id="adminPanel" style="display:none">
+      <h2>📄 Registered Teams</h2>
+      <pre id="csvData">Loading...</pre>
+      <button onclick="downloadCSV()">⬇️ Download CSV</button>
+    </div>
+  </div>
+
+  <script>
+    const correctPassword = "ansh123";
+
+    function checkPassword() {
+      const input = document.getElementById("adminPassword").value;
+      if (input === correctPassword) {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("adminPanel").style.display = "block";
+        fetch('/.netlify/functions/getTeams')
+          .then(res => res.text())
+          .then(data => document.getElementById("csvData").textContent = data);
+      } else {
+        alert("Wrong password!");
+      }
+    }
+
+    function downloadCSV() {
+      fetch('/.netlify/functions/getTeams')
+        .then(res => res.blob())
+        .then(blob => {
+          const url = window.URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'teams.csv';
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+        });
+    }
+  </script>
+</body>
+</html>

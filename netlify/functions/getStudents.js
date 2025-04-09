@@ -31,8 +31,8 @@ exports.handler = async (event) => {
       };
   }
 
-  // ✅ Correct path: from netlify/functions/ go to ../../data/filename.csv
-  const filePath = path.join(__dirname, '../../data', fileName);
+  // ✅ Use absolute root path instead of __dirname
+  const filePath = path.join(process.cwd(), 'data', fileName);
 
   return new Promise((resolve) => {
     const students = [];

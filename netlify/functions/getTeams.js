@@ -11,7 +11,7 @@ exports.handler = async (event) => {
       body: content,
       headers: {
         'Content-Type': 'text/csv',
-        'Content-Disposition': 'attachment; filename="teams.csv"'
+        'Content-Disposition': 'attachment; filename="netlify/functions/getTeams.js"'
       }
     };
   } catch (err) {

@@ -1,0 +1,13 @@
+{
+    "name": "capstone-team-registration",
+    "version": "1.0.0",
+    "description": "Team registration portal with Netlify Functions",
+    "main": "index.html",
+    "scripts": {
+      "start": "echo 'No build step needed'"
+    },
+    "keywords": [],
+    "author": "Ansh Thakare",
+    "license": "MIT"
+  }
+  

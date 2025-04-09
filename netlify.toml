@@ -3,4 +3,4 @@
 
 [dev]
   functions = "netlify/functions"
-
+  publish = "./"  # optional: ensures Netlify serves your HTML files from root

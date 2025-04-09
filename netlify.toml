@@ -2,6 +2,8 @@
   functions = "netlify/functions"
   publish = "."
 
-# ✅ Include the data folder during build
-[[include]]
-  path = "data"
+  # 👇 This ensures `data/` is available to functions
+  included_files = ["data/*.csv"]
+
+[dev]
+  functions = "netlify/functions"

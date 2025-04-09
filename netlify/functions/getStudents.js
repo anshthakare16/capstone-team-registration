@@ -14,7 +14,7 @@ exports.handler = async (event) => {
   let fileName = '';
   switch (classParam.toLowerCase()) {
     case 'aids':
-      fileName = 'data/cse_b_students.csv';
+      fileName = 'data/aids_students.csv';
       break;
     case 'cse a':
     case 'csea':

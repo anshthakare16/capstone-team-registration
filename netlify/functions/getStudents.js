@@ -18,11 +18,11 @@ exports.handler = async (event) => {
       break;
     case 'cse a':
     case 'csea':
-      fileName = 'csa_a_students.csv';
+      fileName = 'data/csa_a_students.csv';
       break;
     case 'cse b':
     case 'cseb':
-      fileName = 'cse_b_students.csv';
+      fileName = 'data/cse_b_students.csv';
       break;
     default:
       return {

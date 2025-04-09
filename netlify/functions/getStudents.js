@@ -31,8 +31,8 @@ exports.handler = async (event) => {
       };
   }
 
-  // ✅ Use absolute root path instead of __dirname
-  const filePath = path.join(process.cwd(), 'data', fileName);
+  // ✅ Corrected path
+  const filePath = path.join(__dirname, 'data', fileName);
 
   return new Promise((resolve) => {
     const students = [];
